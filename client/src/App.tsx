@@ -13,9 +13,11 @@ import Community from "./pages/Community";
 import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
 import AttractionDetail from "./pages/AttractionDetail";
+import Admin from "./pages/Admin";
+import Cart from "./pages/Cart";
 import Layout from "./components/Layout";
+
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Layout>
       <Switch>
@@ -28,23 +30,19 @@ function Router() {
         <Route path="/community" component={Community} />
         <Route path="/auth" component={Auth} />
         <Route path="/profile" component={Profile} />
+        <Route path="/admin" component={Admin} />
+        <Route path="/cart" component={Cart} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider
         defaultTheme="light"
-        // switchable
       >
         <TooltipProvider>
           <Toaster />
