@@ -27,7 +27,7 @@ const IDENTITIES = [
 ];
 
 export default function Profile() {
-  const { user, isLoading, refresh } = useAuth();
+  const { user, loading, refresh } = useAuth();
   const { data: orders, isLoading: ordersLoading } = trpc.orders.myOrders.useQuery(undefined, {
       enabled: !!user
   });
@@ -70,7 +70,7 @@ export default function Profile() {
     });
   };
 
-  if (isLoading) {
+  if (loading) {
     return <div className="flex justify-center py-20"><Loader2 className="animate-spin" /></div>;
   }
 

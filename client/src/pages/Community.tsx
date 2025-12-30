@@ -123,8 +123,8 @@ export default function Community() {
                         </div>
                       </div>
                       <DialogFooter>
-                        <Button onClick={handlePublish} disabled={createPostMutation.isLoading}>
-                          {createPostMutation.isLoading ? "发布中..." : "发布"}
+                        <Button onClick={handlePublish} disabled={createPostMutation.isPending}>
+                          {createPostMutation.isPending ? "发布中..." : "发布"}
                         </Button>
                       </DialogFooter>
                     </DialogContent>

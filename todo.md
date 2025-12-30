@@ -37,6 +37,15 @@
 - [x] 更新社区模块数据获取逻辑
 
 ## 测试与优化
-- [ ] 编写API单元测试
-- [ ] 前端功能测试
-- [ ] 性能优化
+- [x] 编写API单元测试
+- [x] 前端功能测试（TypeScript类型检查通过）
+- [x] 性能优化（代码分割、Chunk优化）
+
+## 代码质量修复（2024-12-30）
+- [x] 修复 server/routers.ts 语法错误（括号不匹配、代码结构混乱）
+- [x] 修复 server/db.ts 缺少 `ne` 导入
+- [x] 修复 client/src/pages/Community.tsx 中 `isLoading` 改为 `isPending`
+- [x] 修复 client/src/pages/Profile.tsx 中 `isLoading` 改为 `loading`
+- [x] 修复 client/src/pages/Store.tsx 中 `product.sales` 可能为 null 的问题
+- [x] 添加 API 单元测试文件 server/api.test.ts（20个测试用例）
+- [x] 优化 vite.config.ts 添加代码分割配置

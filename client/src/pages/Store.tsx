@@ -172,7 +172,7 @@ export default function Store() {
                       <ShoppingCart className="w-4 h-4" />
                     </Button>
                   </div>
-                  {product.sales > 2000 && (
+                  {(product.sales ?? 0) > 2000 && (
                     <Badge className="absolute top-3 left-3 bg-red-500 text-white border-none shadow-sm">
                       热销
                     </Badge>
